@@ -774,7 +774,11 @@ abstract class Feedzy_Rss_Feeds_Admin_Abstract {
 					$domain      = parse_url( $newLink );
 					$authorURL   = '//' . $domain['host'];
 					$authorURL   = apply_filters( 'feedzy_author_url', $authorURL, $authorName, $feedURL );
-					$contentMeta .= __( 'by', 'feedzy-rss-feeds' ) . ' <a href="' . $authorURL . '" target="' . $sc['target'] . '" title="' . $domain['host'] . '" >' . $authorName . '</a> ';
+					if ( $authorURL ) {
+						$contentMeta .= __( 'by', 'feedzy-rss-feeds' ) . ' <a href="' . $authorURL . '" target="' . $sc['target'] . '" title="' . $domain['host'] . '" >' . $authorName . '</a> ';
+					} else {
+						$contentMeta .= __( 'by', 'feedzy-rss-feeds' ) . ' ' . $authorName . ' ';
+					}
 				}
 			}
 			if ( $metaArgs['date'] ) {
