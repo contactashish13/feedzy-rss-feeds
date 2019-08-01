@@ -896,6 +896,8 @@ abstract class Feedzy_Rss_Feeds_Admin_Abstract {
 			}
 		}
 
+		do_action( 'themeisle_log_event', FEEDZY_NAME, sprintf( 'Meta args are: %s', print_r( $meta_args, true ) ), 'debug', __FILE__, __LINE__ );
+
 		// Filter: feedzy_meta_args
 		$meta_args    = apply_filters( 'feedzy_meta_args', $meta_args, $feed_url, $item );
 		$content_meta = '';
