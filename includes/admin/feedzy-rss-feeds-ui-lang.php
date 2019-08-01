@@ -242,10 +242,10 @@ class Feedzy_Rss_Feeds_Ui_Lang {
 						'value'       => '',
 					),
 					'meta'           => array(
-						'label' => sprintf( __( 'Should we display additional meta fields out of %1$sauthor%2$s, %3$sdate%4$s and %5$stime%6$s? (comma-separated list). View documentation %7$shere%8$s.', 'feedzy-rss-feeds' ), '<code>', '</code>', '<code>', '</code>', '<code>', '</code>', '<a href="https://docs.themeisle.com/article/1089-how-to-display-author-date-or-time-from-the-feed" target="_new">', '</a>' ),
+						'label' => sprintf( __( 'Should we display additional meta fields out of %1$sauthor%2$s, %3$sdate%4$s and %5$stime%6$s? (comma-separated list). To display nothing, use %7$sno%8$s and for defaults use %9$syes%10$s. View documentation %11$shere%12$s for advanced configuration.', 'feedzy-rss-feeds' ), '<code>', '</code>', '<code>', '</code>', '<code>', '</code>', '<code>', '</code>', '<code>', '</code>', '<a href="https://docs.themeisle.com/article/1089-how-to-display-author-date-or-time-from-the-feed" target="_new">', '</a>' ),
 						'placeholder' => __( '(eg: author, date, time, tz=local)', 'feedzy-rss-feeds' ),
 						'type'  => 'text',
-						'value' => '',
+						'value' => 'no',
 					),
 					'summary'        => array(
 						'label' => __( 'Should we display a description (abstract) of the retrieved item?', 'feedzy-rss-feeds' ),
