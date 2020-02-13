@@ -137,8 +137,6 @@ class Feedzy_Rss_Feeds_Ui {
 	 * @return  array
 	 */
 	public function feedzy_add_tinymce_lang( $arr ) {
-		error_log( 'called mce_external_languages' );
-
 		$feedzy_rss_feeds_ui_lang = FEEDZY_ABSPATH . '/includes/admin/feedzy-rss-feeds-ui-lang.php';
 		$feedzy_rss_feeds_ui_lang = apply_filters( 'feedzy_rss_feeds_ui_lang_filter', $feedzy_rss_feeds_ui_lang );
 		$arr[] = $feedzy_rss_feeds_ui_lang;
@@ -154,7 +152,6 @@ class Feedzy_Rss_Feeds_Ui {
 	 * @return  array
 	 */
 	public function feedzy_tinymce_plugin( $plugin_array ) {
-		error_log( 'called mce_external_plugins' );
 		$plugin_array['feedzy_mce_button'] = FEEDZY_ABSURL . 'js/feedzy-rss-feeds-ui-mce.js';
 		return $plugin_array;
 	}
